@@ -1,8 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
 
 export const App = () => {
 	return (
+		// декларотивный стиль
 		<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
@@ -17,10 +18,21 @@ export const App = () => {
 				>
 					Learn React
 				</a>
-				<div>
-
-				</div>
+				<span>
+					{getCurrentYear()}
+				</span>
 			</header>
 		</div>
-	);
+	)
+
+
 }
+
+
+//императивный стиль
+const getCurrentYear = () => {
+	let date = new Date()
+	return date.getFullYear()
+}
+
+
